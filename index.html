@@ -32,7 +32,8 @@
         }
         .main-content{
             justify-content: center;
-            margin-top: 34vh;
+            margin-top: 24vh;
+            height: 100px;
         }
         .main-content .content {
             text-align: center;
@@ -49,7 +50,21 @@
             font-size: 1rem;
             margin-top: 3px;
         }
-
+        .footer-class {
+            padding: 2rem 1rem;
+            font-family: 'Open Sans', 'sans-serif';
+            margin-top: 160px;
+            margin-bottom: 2rem;
+            background-color: #e9ecef;
+            border-radius: .8rem;
+            text-align: center;
+        }
+        .copyright {
+            font-size: 1rem;
+        }
+        .credits {
+            font-size: .8rem;
+        }
         @keyframes fade-in {
             from {opacity: 0;
                 font-size: 0rem;
@@ -75,17 +90,15 @@
 
         @media (max-width: 992px) {
             .main-content {
-                margin-top: 28vh;
+                margin-top: 20vh;
             }
             .main-content .content {
                 animation-name: fade-in-mobile;
                 animation-duration: 1s;
                 font-size: 1rem;
             }
-            .bg {
-            font-size: 18rem;
-            top: 28%;
-            left: 2%;
+            .footer-class {
+                margin-top: 100px;
             }
         }
     </style>
@@ -96,11 +109,19 @@
     <div class="main-content">
         <div class="content">
             This website has been permanently moved to <br>
-            <a href="https://imshawan.netlify.app">imshawan.netlify.app</a>
+            <a href="https://imshawan.netlify.app" target="_blank">imshawan.netlify.app</a>
         </div>
         <div id="redirect" class="redirect">
             <span id="redirect-time" class="redirect-time"></span>
         </div>
+    </div>
+    <div class="footer-class">
+        <div class="copyright">
+            Copyright &copy; 2021 <strong><span>im-shawan.github.io</span></strong>. All Rights Reserved.
+         </div>
+         <div class="credits">
+           Designed by <a href="https://imshawan.netlify.app/">Shawan Mandal</a> <br>
+         </div>
     </div>
     <script>
         var countDownTime = 5;
