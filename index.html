@@ -32,7 +32,6 @@
         }
         .main-content{
             justify-content: center;
-            margin-top: 24vh;
             height: 100px;
         }
         .main-content .content {
@@ -44,6 +43,13 @@
             animation-name: fade-in;
             animation-duration: 1s;
         }
+        .status-code {
+            font-size: 10rem;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            z-index: -100;
+        }
         .redirect {
             font-family: "Arial";
             text-align: center;
@@ -53,7 +59,7 @@
         .footer-class {
             padding: 2rem 1rem;
             font-family: 'Open Sans', 'sans-serif';
-            margin-top: 160px;
+            margin-top: 120px;
             margin-bottom: 2rem;
             background-color: #e9ecef;
             border-radius: .8rem;
@@ -63,18 +69,9 @@
             font-size: 1rem;
         }
         .credits {
-            font-size: .8rem;
+            font-size: .9rem;
         }
-        .status-code {
-            font-size: 10rem;
-            position: absolute;
-            left: 42.5%;
-            top: 26%;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            z-index: -100;
-        }
+        
         @keyframes fade-in {
             from {opacity: 0;
                 font-size: 0rem;
@@ -99,21 +96,16 @@
         }
 
         @media (max-width: 992px) {
-            .main-content {
-                margin-top: 20vh;
-            }
             .main-content .content {
                 animation-name: fade-in-mobile;
                 animation-duration: 1s;
                 font-size: 1rem;
             }
             .footer-class {
-                margin-top: 100px;
+                margin-top: 50px;
             }
             .status-code {
                 font-size: 8rem;
-                top: 27%;
-                left: 30%;
             }
         }
     </style>
@@ -151,7 +143,7 @@
                 clearInterval(timeFunc);
                 document.getElementById("redirect-time").innerHTML = " ";
                 document.getElementById("redirect").innerHTML = "Redirecting...";
-                location.assign(redirectURL);
+                //location.assign(redirectURL);
             }
         }, 1000)
     </script>
