@@ -65,6 +65,16 @@
         .credits {
             font-size: .8rem;
         }
+        .status-code {
+            font-size: 10rem;
+            position: absolute;
+            left: 42.5%;
+            top: 26%;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            z-index: -100;
+        }
         @keyframes fade-in {
             from {opacity: 0;
                 font-size: 0rem;
@@ -100,12 +110,18 @@
             .footer-class {
                 margin-top: 100px;
             }
+            .status-code {
+                font-size: 8rem;
+                top: 27%;
+                left: 30%;
+            }
         }
     </style>
     <div class="heading-class">
         Welcome! <br>
         <div class="sub-heading"> im-shawan.github.io </div>
     </div>
+    <div class="status-code"><span>301</span></div>
     <div class="main-content">
         <div class="content">
             This website has been permanently moved to <br>
@@ -135,7 +151,7 @@
                 clearInterval(timeFunc);
                 document.getElementById("redirect-time").innerHTML = " ";
                 document.getElementById("redirect").innerHTML = "Redirecting...";
-                location.assign(redirectURL);
+                //location.assign(redirectURL);
             }
         }, 1000)
     </script>
