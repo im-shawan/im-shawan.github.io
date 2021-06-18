@@ -25,7 +25,6 @@
         font-family: 'Raleway';
         animation-name: slide-in;
         animation-duration: 1s;
-        
         }
         .heading-class .sub-heading {
             margin-top: -15px;
@@ -44,6 +43,13 @@
             animation-name: fade-in;
             animation-duration: 1s;
         }
+        .redirect {
+            font-family: "Arial";
+            text-align: center;
+            font-size: 1rem;
+            margin-top: 3px;
+        }
+
         @keyframes fade-in {
             from {opacity: 0;
                 font-size: 0rem;
@@ -52,6 +58,7 @@
                 font-size: 1.5rem;
             }
         }
+
         @keyframes fade-in-mobile {
             from {opacity: 0;
                 font-size: 0rem;
@@ -60,10 +67,12 @@
                 font-size: 1rem;
             }
         }
+
         @keyframes slide-in {
-            from {margin-left: -500px;}
+            from {margin-left: -100px;}
             to {margin-left: 0px;}
         }
+
         @media (max-width: 992px) {
             .main-content {
                 margin-top: 28vh;
@@ -77,7 +86,7 @@
             font-size: 18rem;
             top: 28%;
             left: 2%;
-        }
+            }
         }
     </style>
     <div class="heading-class">
@@ -88,7 +97,26 @@
         <div class="content">
             This website has been permanently moved to <br>
             <a href="https://imshawan.netlify.app">imshawan.netlify.app</a>
-        </h2>
+        </div>
+        <div id="redirect" class="redirect">
+            <span id="redirect-time" class="redirect-time"></span>
+        </div>
     </div>
+    <script>
+        var countDownTime = 5;
+        var redirectURL = 'https://imshawan.netlify.app';
+
+        var timeFunc = setInterval(function() {
+            --countDownTime;
+            document.getElementById("redirect-time").innerHTML = "Redirecting in " + countDownTime + " secs";
+
+            if (countDownTime < 0) {
+                clearInterval(timeFunc);
+                document.getElementById("redirect-time").innerHTML = " ";
+                document.getElementById("redirect").innerHTML = "Redirecting...";
+                location.assign(redirectURL);
+            }
+        }, 1000)
+    </script>
 </body>
 </html>
